@@ -6,6 +6,12 @@ The dataset contains 946 books obtained from scraping Amazon books.
 
 Reference: https://www.kaggle.com/datasets/die9origephit/amazon-data-science-books
 
+Read DataFrame
+
+```
+df= pd.read_csv('CSVPATH')
+```
+
 Representing text using TF-IDF
 
 ```
@@ -52,7 +58,7 @@ labels = model.labels_
 book_cluster = pd.DataFrame(list(zip(df["title"],labels)),columns=['title','cluster'])
 ```
 
-Naming clusters:
+Naming clusters based on the top features on each clusters:
 Cluster number 0 => statistics and probability
 Cluster number 1 => Data Science
 Cluster number 2 => Machine Learning
